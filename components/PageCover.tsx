@@ -2,7 +2,7 @@ import React from 'react';
 import { Layers, Shield, Zap } from 'lucide-react';
 import { PRODUCT_DATA } from '../constants';
 import A4Page from './A4Page';
-import productImage from "@/img/EPG-3000M-front.jpg";
+import productImage from "@/img/S288/B面.jpg";
 const PageCover: React.FC = () => {
   return (
     <A4Page pageNumber={1} className="justify-center">

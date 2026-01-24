@@ -1,87 +1,85 @@
 import { ProductData } from './types';
 
 export const PRODUCT_DATA: ProductData = {
-  model: "EPG-3000M",
-  name: "国产飞腾半加固笔记本",
-  description: "专为工业环境、户外作业及恶劣场景设计的高性能加固笔记本，集成国产飞腾处理器、多系统支持以及丰富的接口配置。",
+  model: "T-1000S",
+  name: "便携式智能终端",
+  description: "高性能便携式智能终端，集成专业显示系统、丰富接口配置和强大的通讯能力，专为各类专业场景设计。",
   specs: [
     {
       title: "核心处理平台",
       icon: "Cpu",
       items: [
-        { label: "CPU", value: "飞腾D3000M/8核 主频2.3 GHz" },
-        { label: "内存", value: "DDR5 默认板贴内存颗粒8GB（兼容16GB，可选配）" },
+        { label: "CPU", value: "i7-1355U" },
+        { label: "内存", value: "16G" },
         { label: "存储", value: "1TB SSD" },
-        { label: "显卡", value: "集显" },
-        { label: "系统", value: "支持国产银河麒麟、UOS系统" }
+        { label: "显卡", value: "Intel Iris Xe Graphics eligible" },
+        { label: "系统", value: "Windows 10 测试版（64位）" }
       ]
     },
     {
       title: "专业显示系统",
       icon: "Monitor",
       items: [
-        { label: "显示屏", value: "1×15.6英寸 FHD (1920×1080)" },
-        { label: "亮度", value: "300 nits（兼容高亮屏）" },
-        { label: "触摸屏", value: "可选" }
+        { label: "主显示屏", value: "15.6英寸 FHD (1920×1080)" },
+        { label: "亮度", value: "1000 nits" },
+        { label: "串口屏", value: "2寸串口屏，显示网络状态" }
       ]
     },
     {
       title: "输入与交互",
       icon: "Keyboard",
       items: [
-        { label: "键盘", value: "工业级键盘" },
-        { label: "触控板", value: "多点触控/防水设计触控板" },
-        { label: "摄像头", value: "可选200W像素摄像头" },
-        { label: "音频", value: "内置2×扬声器" },
-        { label: "音频接口", value: "1×Mic&Line-out（3.5mm二合一接口）" }
+        { label: "键盘", value: "外置多功能蓝牙键盘" },
+        { label: "摄像头", value: "内置1080P 摄像头" },
+        { label: "音频", value: "内置扬声器" },
+        { label: "音频输入", value: "1×3.5mm 输入、1×卡侬" },
+        { label: "音频输出", value: "1×3.5mm 输出" },
+        { label: "控制键", value: "1×MIC增益控制键、1×喇叭控制键" }
       ]
     },
     {
       title: "通讯与网络",
       icon: "Wifi",
       items: [
-        { label: "有线网络", value: "2×RJ45 LAN 10M/100M/1000M 自适应以太网口" },
-        { label: "无线网络", value: "板载GPS/北斗/GLONASS模块，支持WIFI&蓝牙" },
-        { label: "网络扩展", value: "1×SIM卡槽/1×4G 5G模块插槽" }
+        { label: "有线网络", value: "1×LAN、1×WAN（LAN:10/100/1000M）" },
+        { label: "无线网络", value: "5G路由器" },
+        { label: "定位", value: "单北斗定位" },
+        { label: "SIM卡座", value: "2×SIM卡座" }
       ]
     },
     {
       title: "I/O 扩展接口",
       icon: "Cable",
       items: [
-        { label: "USB", value: "2×USB 3.0 Type-A，2×USB 2.0 Type A" },
-        { label: "显示接口", value: "1×HDMI 输出" },
-        { label: "串口", value: "1×RS232" },
-        { label: "内部接口", value: "1×M.2插槽/3×RS232接口/1×GPS天线接口" }
+        { label: "USB", value: "USB*4（可能接摄像头、麦克风、键盘、鼠标、U盘）" },
+        { label: "PC端视频接口", value: "1×HDMI输入、1×HDMI输出" },
+        { label: "会议终端视频接口", value: "2×HDMI 输入（内置3进1出切换器）+1×HDMI 输出" },
+        { label: "会议终端音频接口", value: "3.5输入+3.5输出" },
+        { label: "控制接口", value: "1×RS232控制接口" },
+        { label: "电源接口", value: "1×DCIN" }
       ]
     },
     {
       title: "物理与环境",
       icon: "Box",
       items: [
-        { label: "尺寸", value: "375×287×37 mm (W×D×H)（不含包角）" },
-        { label: "重量", value: "5.5kg" },
-        { label: "防护等级", value: "IP65（争取设计到IP67）" },
-        { label: "工作环境", value: "工作温度：-20℃ ~ +45℃；工作湿度：5% - 90%，无凝露" },
-        { label: "存储环境", value: "存储温度：-40℃ ~ +70℃；存储湿度：5% - 95%，无凝露" },
-        { label: "供电", value: "120W适配器：AC输入100-240V，DC输出19V" },
-        { label: "电池", value: "锂离子电池，14.8V/10400mAh，典型续航6小时" },
-        { label: "颜色", value: "黑色（可选银色）" }
+        { label: "尺寸", value: "465 mm×400 mm×190 mm" },
+        { label: "重量", value: "≤15kg" },
+        { label: "防护等级", value: "IP67" },
+        { label: "工作温度", value: "-10℃ ～ +50℃" },
+        { label: "存储温度", value: "-10℃ ～ +70℃" },
+        { label: "工作湿度", value: "10% - 90%" },
+        { label: "电源", value: "120W" },
+        { label: "续航", value: "4小时" }
       ]
     }
   ],
   options: [
-    { category: "系统升级", option: "操作系统", spec: "正版 银河麒麟桌面版V10" },
-    { category: "摄像头", option: "200W像素摄像头", spec: "可选配" },
-    { category: "存储扩展", option: "SSD扩展", spec: "容量：2T；类型：2.5寸固态硬盘（支持7mm厚度硬盘）" },
-    { category: "显示选项", option: "高亮显示", spec: "支持" },
-    { category: "显示选项", option: "触控屏幕", spec: "支持" },
-    { category: "网络", option: "无线网络", spec: "WIFI&蓝牙" },
-    { category: "定制服务", option: "开机LOGO定制", spec: "支持格式：BMP/PNG；分辨率：1920×1080" },
-    { category: "定制服务", option: "机身LOGO定制", spec: "丝印/金属标贴；尺寸：30×10mm（标准）" },
-    { category: "定制服务", option: "产品铭牌定制", spec: "材质：金属/PVC/亚克力；尺寸：50×30mm" },
-    { category: "定制服务", option: "包装定制", spec: "定制说明书；MOQ：10pcs" },
-    { category: "定制服务", option: "定制附件包", spec: "" },
-    { category: "定制服务", option: "颜色定制", spec: "黑色/银色" }
+    { category: "音频设备", option: "无线麦克风", spec: "" },
+    { category: "视频设备", option: "无线摄像头", spec: "优先考虑" },
+    { category: "视频设备", option: "3米摄像头", spec: "" },
+    { category: "视频切换", option: "HDMI 3进1出切换器", spec: "带遥控器" },
+    { category: "会议系统", option: "融讯会议终端", spec: "" },
+    { category: "音频系统", option: "音频矩阵", spec: "" }
   ]
 };
