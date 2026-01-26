@@ -9,7 +9,7 @@ const PageOptions: React.FC = () => {
       <div className="flex flex-col h-full">
         <div className="mb-8 border-b border-slate-200 pb-4 flex justify-between items-end">
           <div>
-            <h2 className="text-3xl font-bold text-slate-800">选配与定制</h2>
+            <h2 className="text-3xl font-bold text-slate-800">配件</h2>
             <p className="text-slate-500 mt-1">Configuration Options & Accessories</p>
           </div>
           <Settings className="text-slate-300 w-10 h-10" />
@@ -25,7 +25,7 @@ const PageOptions: React.FC = () => {
               <thead className="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
                 <tr>
                   <th className="p-4 w-1/4">功能类别</th>
-                  <th className="p-4 w-1/4">选配项</th>
+                  <th className="p-4 w-1/4">配件</th>
                   <th className="p-4 w-1/2">规格说明</th>
                 </tr>
               </thead>
