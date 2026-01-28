@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { Printer, FileText } from 'lucide-react';
 import html2pdf from 'html2pdf.js';
-import PageCover from './components/PageCover';
-import PageSpecs from './components/PageSpecs';
-import PageOptions from './components/PageOptions';
+import FirstPage from './components/FirstPage';
+import SecondPage from './components/SecondPage';
+import ThirdPage from './components/ThirdPage';
 
 const App: React.FC = () => {
   const documentRef = useRef<HTMLDivElement>(null);
@@ -63,9 +63,9 @@ const App: React.FC = () => {
 
       {/* Document Container - For html2pdf capture */}
       <div ref={documentRef} className="flex flex-col gap-8 print:gap-0 w-full items-center">
-        <PageCover />
-        <PageSpecs />
-        <PageOptions />
+        <FirstPage />
+        <SecondPage />
+        <ThirdPage />
       </div>
       
     </div>

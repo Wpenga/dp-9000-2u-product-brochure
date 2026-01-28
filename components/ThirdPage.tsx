@@ -3,7 +3,7 @@ import { Settings, PlusCircle } from 'lucide-react';
 import { PRODUCT_DATA } from '../constants';
 import A4Page from './A4Page';
 
-const PageOptions: React.FC = () => {
+const ThirdPage: React.FC = () => {
   return (
     <A4Page pageNumber={3}>
       <div className="flex flex-col h-full">
@@ -72,4 +72,4 @@ const PageOptions: React.FC = () => {
   );
 };
 
-export default PageOptions;
+export default ThirdPage;

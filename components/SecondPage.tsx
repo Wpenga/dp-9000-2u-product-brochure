@@ -7,7 +7,7 @@ const IconMap: Record<string, LucideIcon> = {
   Cpu, Monitor, Wifi, Cable, Box, Keyboard
 };
 
-const PageSpecs: React.FC = () => {
+const SecondPage: React.FC = () => {
   return (
     <A4Page pageNumber={2}>
       <div className="flex flex-col h-full">
@@ -84,4 +84,4 @@ const PageSpecs: React.FC = () => {
   );
 };
 
-export default PageSpecs;
+export default SecondPage;
