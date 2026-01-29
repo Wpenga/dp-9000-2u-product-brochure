@@ -17,10 +17,10 @@ const SecondPage: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-          {PRODUCT_DATA.specs.map((category, idx) => {
+          {PRODUCT_DATA.specs.map((category) => {
             const Icon = IconMap[category.icon] || Box;
             return (
-              <div key={idx} className="break-inside-avoid">
+              <div key={category.title} className="break-inside-avoid">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-brand-50 rounded-lg text-brand-700">
                     <Icon size={20} />
@@ -29,15 +29,15 @@ const SecondPage: React.FC = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className="flex flex-col border-l-2 border-slate-100 pl-3">
+                  {category.items.map((item) => (
+                    <div key={item.label} className="flex flex-col border-l-2 border-slate-100 pl-3">
                       <span className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-0.5">
                         {item.label}
                       </span>
                       {Array.isArray(item.value) ? (
                         <div className="flex flex-col gap-1">
-                          {item.value.map((v, vIdx) => (
-                            <span key={vIdx} className="text-sm text-slate-700 font-medium">
+                          {item.value.map((v) => (
+                            <span key={v} className="text-sm text-slate-700 font-medium">
                               • {v}
                             </span>
                           ))}

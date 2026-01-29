@@ -15,10 +15,19 @@ export interface OptionItem {
   spec: string;
 }
 
+export interface KeyFeature {
+  icon: string;
+  title: string;
+  description: string;
+}
+
 export interface ProductData {
   model: string;
   name: string;
   description: string;
+  imagePath: string;
+  subtitle: string;
   specs: SpecCategory[];
   options: OptionItem[];
+  keyFeatures: KeyFeature[];
 }

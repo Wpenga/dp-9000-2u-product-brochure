@@ -4,6 +4,25 @@ export const PRODUCT_DATA: ProductData = {
   model: "T-1000S",
   name: "便携式智能终端",
   description: "高性能便携式智能终端，集成专业显示系统、丰富接口配置和强大的通讯能力，专为各类专业场景设计。",
+  imagePath: "../img/S288/B面.jpg",
+  subtitle: "便携式指挥终端",
+  keyFeatures: [
+    {
+      icon: "Shield",
+      title: "i7 高性能处理器",
+      description: "采用i7-1355U处理器，16G内存，1TB SSD，性能强劲。"
+    },
+    {
+      icon: "Layers",
+      title: "专业显示系统",
+      description: "15.6英寸FHD高亮屏，1000 nits亮度，2寸串口屏显示网络状态。"
+    },
+    {
+      icon: "Zap",
+      title: "全防护设计",
+      description: "IP67防护等级，5G路由器，单北斗定位，适应恶劣环境。"
+    }
+  ],
   specs: [
     {
       title: "核心处理平台",
