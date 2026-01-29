@@ -1,5 +1,6 @@
 import React from 'react';
 import { Page, View, Text, StyleSheet } from '@react-pdf/renderer';
+import { ProductData } from '../types';
 import { PRODUCT_DATA } from '../constants';
 
 // 图标映射 - 使用emoji替代Lucide图标
@@ -10,9 +11,18 @@ const IconMap: Record<string, string> = {
   Cable: '🔌',
   Box: '📦',
   Keyboard: '⌨️',
+  MemoryStick: '💾',
+  HardDrive: '💿',
+  Battery: '🔋',
+  Network: '🌐',
+  Usb: '🖇️',
 };
 
-const PDFSecondPage: React.FC = () => {
+interface PDFSecondPageProps {
+  productData: ProductData | null;
+}
+
+const PDFSecondPage: React.FC<PDFSecondPageProps> = ({ productData = PRODUCT_DATA }) => {
   return (
     <Page size="A4" style={styles.page}>
       <View style={styles.container}>
@@ -22,7 +32,7 @@ const PDFSecondPage: React.FC = () => {
         </View>
 
         <View style={styles.specsGrid}>
-          {PRODUCT_DATA.specs.map((category, idx) => {
+          {productData.specs.map((category, idx) => {
             const icon = IconMap[category.icon] || '📦';
             return (
               <View key={idx} style={styles.specCategory}>

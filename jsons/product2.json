@@ -1,0 +1,84 @@
+{
+  "model": "DP-9000",
+  "name": "桌面式智能终端",
+  "description": "高性能桌面式智能终端，集成专业显示系统、丰富接口配置和强大的通讯能力，专为各类专业场景设计。",
+  "imagePath": "../img/DP-9000A 中性.png",
+  "subtitle": "高性能桌面式显控终端",
+  "specs": [
+    {
+      "title": "处理器",
+      "icon": "Cpu",
+      "items": [
+        {
+          "label": "处理器型号",
+          "value": "Intel Core i5-13400"
+        },
+        {
+          "label": "核心数",
+          "value": "10核 (6P+4E)"
+        },
+        {
+          "label": "主频",
+          "value": "2.5GHz-4.6GHz"
+        }
+      ]
+    },
+    {
+      "title": "内存",
+      "icon": "MemoryStick",
+      "items": [
+        {
+          "label": "内存容量",
+          "value": "32GB DDR4"
+        },
+        {
+          "label": "内存插槽",
+          "value": "4个DIMM插槽"
+        },
+        {
+          "label": "最大支持",
+          "value": "128GB"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "category": "存储",
+      "option": "标准配置",
+      "spec": "1TB SSD"
+    },
+    {
+      "category": "存储",
+      "option": "升级配置",
+      "spec": "2TB SSD"
+    },
+    {
+      "category": "显示",
+      "option": "单屏配置",
+      "spec": "24英寸FHD显示器"
+    },
+    {
+      "category": "显示",
+      "option": "双屏配置",
+      "spec": "双24英寸FHD显示器"
+    }
+  ],
+  "keyFeatures": [
+    {
+      "icon": "Shield",
+      "title": "i5 高性能处理器",
+      "description": "采用i5-13400处理器，32G内存，1TB SSD，性能强劲。"
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "title": "专业显示系统",
+      "description": "24英寸FHD高亮屏，支持多屏扩展，显示效果出色。"
+    },
+    {
+      "icon": "Wifi",
+      "title": "全网络支持",
+      "description": "支持WiFi 6、蓝牙5.2等多种网络制式，连接稳定。"
+    }
+  ]
+}

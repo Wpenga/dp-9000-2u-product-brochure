@@ -1,0 +1,74 @@
+{
+  "model": "T-1000S",
+  "name": "便携式智能终端",
+  "description": "高性能便携式智能终端，集成专业显示系统、丰富接口配置和强大的通讯能力，专为各类专业场景设计。",
+  "imagePath": "../img/S288/B面.jpg",
+  "subtitle": "三屏高亮显控一体化终端",
+  "specs": [
+    {
+      "title": "处理器",
+      "icon": "Cpu",
+      "items": [
+        {
+          "label": "处理器型号",
+          "value": "Intel Core i7-1355U"
+        },
+        {
+          "label": "核心数",
+          "value": "10核 (2P+8E)"
+        },
+        {
+          "label": "主频",
+          "value": "1.7GHz-5.0GHz"
+        }
+      ]
+    },
+    {
+      "title": "内存",
+      "icon": "MemoryStick",
+      "items": [
+        {
+          "label": "内存容量",
+          "value": "16GB DDR4"
+        },
+        {
+          "label": "内存插槽",
+          "value": "2个SO-DIMM插槽"
+        },
+        {
+          "label": "最大支持",
+          "value": "64GB"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "category": "存储",
+      "option": "标准配置",
+      "spec": "512GB SSD"
+    },
+    {
+      "category": "存储",
+      "option": "升级配置",
+      "spec": "1TB SSD"
+    }
+  ],
+  "keyFeatures": [
+    {
+      "icon": "Shield",
+      "title": "i7 高性能处理器",
+      "description": "采用i7-1355U处理器，16G内存，1TB SSD，性能强劲。"
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "title": "三屏显示",
+      "description": "14英寸主屏+双7英寸副屏，高亮显示，阳光下可视。"
+    },
+    {
+      "icon": "Wifi",
+      "title": "全网络支持",
+      "description": "支持5G、4G、WiFi 6、蓝牙5.2等多种网络制式。"
+    }
+  ]
+}

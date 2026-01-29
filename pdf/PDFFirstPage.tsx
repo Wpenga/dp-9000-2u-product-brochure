@@ -1,8 +1,13 @@
 import React from 'react';
 import { Page, View, Text, Image, StyleSheet } from '@react-pdf/renderer';
+import { ProductData } from '../types';
 import { PRODUCT_DATA } from '../constants';
 
-const PDFFirstPage: React.FC = () => {
+interface PDFFirstPageProps {
+  productData: ProductData | null;
+}
+
+const PDFFirstPage: React.FC<PDFFirstPageProps> = ({ productData = PRODUCT_DATA }) => {
   return (
     <Page size="A4" style={styles.page}>
       <View style={styles.container}>
@@ -11,8 +16,8 @@ const PDFFirstPage: React.FC = () => {
           <View style={styles.brandTag}>
             <Text style={styles.brandTagText}></Text>
           </View>
-          <Text style={styles.model}>{PRODUCT_DATA.model}</Text>
-          <Text style={styles.name}>{PRODUCT_DATA.name}</Text>
+          <Text style={styles.model}>{productData.model}</Text>
+          <Text style={styles.name}>{productData.name}</Text>
         </View>
 
         {/* Hero Image Area */}
@@ -24,39 +29,27 @@ const PDFFirstPage: React.FC = () => {
               <Text style={styles.imagePlaceholderText}>产品图片</Text>
             </View>
             <View style={styles.imageOverlay}>
-              <Text style={styles.imageOverlayText}>三屏高亮显控一体化终端</Text>
+              <Text style={styles.imageOverlayText}>{productData.subtitle}</Text>
             </View>
           </View>
         </View>
 
         {/* Description */}
         <View style={styles.description}>
-          <Text style={styles.descriptionText}>{PRODUCT_DATA.description}</Text>
+          <Text style={styles.descriptionText}>{productData.description}</Text>
         </View>
 
         {/* Key Features Grid */}
         <View style={styles.featuresGrid}>
-          <View style={styles.featureItem}>
-            <View style={styles.featureIcon}>
-              <Text style={styles.featureIconText}>🛡️</Text>
+          {productData.keyFeatures.map((feature, index) => (
+            <View key={index} style={styles.featureItem}>
+              <View style={styles.featureIcon}>
+                <Text style={styles.featureIconText}>{index === 0 ? '🛡️' : index === 1 ? '📱' : '⚡'}</Text>
+              </View>
+              <Text style={styles.featureTitle}>{feature.title}</Text>
+              <Text style={styles.featureDescription}>{feature.description}</Text>
             </View>
-            <Text style={styles.featureTitle}>i7 高性能处理器</Text>
-            <Text style={styles.featureDescription}>采用i7-1355U处理器，16G内存，1TB SSD，性能强劲。</Text>
-          </View>
-          <View style={styles.featureItem}>
-            <View style={styles.featureIcon}>
-              <Text style={styles.featureIconText}>📱</Text>
-            </View>
-            <Text style={styles.featureTitle}>专业显示系统</Text>
-            <Text style={styles.featureDescription}>15.6英寸FHD高亮屏，1000 nits亮度，2寸串口屏显示网络状态。</Text>
-          </View>
-          <View style={styles.featureItem}>
-            <View style={styles.featureIcon}>
-              <Text style={styles.featureIconText}>⚡</Text>
-            </View>
-            <Text style={styles.featureTitle}>全防护设计</Text>
-            <Text style={styles.featureDescription}>IP67防护等级，5G路由器，单北斗定位，适应恶劣环境。</Text>
-          </View>
+          ))}
         </View>
 
         {/* Footer */}

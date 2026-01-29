@@ -1,13 +1,22 @@
 import React from 'react';
-import { Cpu, Monitor, Wifi, Cable, Box, Keyboard, LucideIcon } from 'lucide-react';
-import { PRODUCT_DATA } from '../constants';
+import { Cpu, Monitor, Wifi, Cable, Box, Keyboard, LucideIcon, MemoryStick, HardDrive, Battery, Network, Usb } from 'lucide-react';
+import { ProductData } from '../types';
 import A4Page from './A4Page';
 
+interface SecondPageProps {
+  productData: ProductData;
+}
+
 const IconMap: Record<string, LucideIcon> = {
-  Cpu, Monitor, Wifi, Cable, Box, Keyboard
+  Cpu, Monitor, Wifi, Cable, Box, Keyboard,
+  MemoryStick,
+  HardDrive,
+  Battery,
+  Network,
+  Usb
 };
 
-const SecondPage: React.FC = () => {
+const SecondPage: React.FC<SecondPageProps> = ({ productData }) => {
   return (
     <A4Page pageNumber={2}>
       <div className="flex flex-col h-full">
@@ -17,7 +26,7 @@ const SecondPage: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-          {PRODUCT_DATA.specs.map((category) => {
+          {productData.specs.map((category) => {
             const Icon = IconMap[category.icon] || Box;
             return (
               <div key={category.title} className="break-inside-avoid">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Document, Page, View, Text, Image, StyleSheet, Font } from '@react-pdf/renderer';
+import { ProductData } from '../types';
 import { PRODUCT_DATA } from '../constants';
 import PDFFirstPage from './PDFFirstPage';
 import PDFSecondPage from './PDFSecondPage';
@@ -16,12 +17,18 @@ Font.register({
   src: 'https://fonts.gstatic.com/s/notosanssc/v26/k3kQo8UDI-1M0wlSV9XAw6M8bE.woff2'
 });
 
-const PDFDocument: React.FC = () => {
+interface PDFDocumentProps {
+  productData?: ProductData | null;
+}
+
+const PDFDocument: React.FC<PDFDocumentProps> = ({ productData }) => {
+  // 使用默认产品数据作为回退
+  const currentProductData = productData || PRODUCT_DATA;
   return (
     <Document>
-      <PDFFirstPage />
-      <PDFSecondPage />
-      <PDFThirdPage />
+      <PDFFirstPage productData={currentProductData} />
+      <PDFSecondPage productData={currentProductData} />
+      <PDFThirdPage productData={currentProductData} />
     </Document>
   );
 };

@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { Layers, Shield, Zap, LucideIcon } from 'lucide-react';
-import { PRODUCT_DATA } from '../constants';
+import { Layers, Shield, Zap, LucideIcon, MonitorSmartphone, Wifi, Cpu, MemoryStick } from 'lucide-react';
+import { ProductData } from '../types';
 import A4Page from './A4Page';
+
+interface FirstPageProps {
+  productData: ProductData;
+}
 
 const IconMap: Record<string, LucideIcon> = {
   Shield,
   Layers,
-  Zap
+  Zap,
+  MonitorSmartphone,
+  Wifi,
+  Cpu,
+  MemoryStick
 };
 
 // 动态加载图片
-const FirstPage: React.FC = () => {
+const FirstPage: React.FC<FirstPageProps> = ({ productData }) => {
   const [productImage, setProductImage] = useState<string>('');
 
   useEffect(() => {
     // 使用相对路径从项目根目录加载图片
-    const imagePath = PRODUCT_DATA.imagePath;
+    const imagePath = productData.imagePath;
     setProductImage(imagePath);
-  }, []);
+  }, [productData.imagePath]);
   return (
     <A4Page pageNumber={1} className="justify-center">
       <div className="flex flex-col h-full justify-between pt-10 pb-20">
@@ -28,10 +36,10 @@ const FirstPage: React.FC = () => {
              {/* Flagship Product */}
            </div>
            <h1 className="text-6xl font-extrabold text-slate-900 tracking-tight leading-none mb-2">
-             {PRODUCT_DATA.model}
+             {productData.model}
            </h1>
            <h2 className="text-3xl font-light text-slate-500">
-             {PRODUCT_DATA.name}
+             {productData.name}
            </h2>
         </div>
 
@@ -45,11 +53,11 @@ const FirstPage: React.FC = () => {
             <img 
               // src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=2042&auto=format&fit=crop" 
               src= {productImage}
-              alt="YJ3000 Command Box" 
+              alt={productData.name} 
               className="w-full h-full object-contain object-center transform transition duration-700 hover:scale-105 p-4"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <p className="text-white/90 text-sm font-medium">{PRODUCT_DATA.subtitle}</p>
+                <p className="text-white/90 text-sm font-medium">{productData.subtitle}</p>
             </div>
           </div>
           {/* Note for developer: Replace the src above with the actual product image URL provided: 
@@ -60,13 +68,13 @@ const FirstPage: React.FC = () => {
         {/* Description */}
         <div className="mb-12">
             <p className="text-xl text-slate-600 leading-relaxed border-l-4 border-brand-500 pl-6">
-              {PRODUCT_DATA.description}
+              {productData.description}
             </p>
         </div>
 
         {/* Key Features Grid */}
         <div className="grid grid-cols-3 gap-6">
-          {PRODUCT_DATA.keyFeatures.map((feature, index) => {
+          {productData.keyFeatures.map((feature, index) => {
             const Icon = IconMap[feature.icon] || Shield;
             return (
               <div key={index} className="bg-slate-50 p-6 rounded-lg border border-slate-100">

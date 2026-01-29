@@ -1,8 +1,13 @@
 import React from 'react';
 import { Page, View, Text, StyleSheet } from '@react-pdf/renderer';
+import { ProductData } from '../types';
 import { PRODUCT_DATA } from '../constants';
 
-const PDFThirdPage: React.FC = () => {
+interface PDFThirdPageProps {
+  productData: ProductData | null;
+}
+
+const PDFThirdPage: React.FC<PDFThirdPageProps> = ({ productData = PRODUCT_DATA }) => {
   return (
     <Page size="A4" style={styles.page}>
       <View style={styles.container}>
@@ -16,7 +21,7 @@ const PDFThirdPage: React.FC = () => {
 
         <View style={styles.content}>
           <Text style={styles.intro}>
-            根据您的具体业务需求，{PRODUCT_DATA.model} 提供以下模块化升级选项。请联系销售代表获取详细定制方案。
+            根据您的具体业务需求，{productData.model} 提供以下模块化升级选项。请联系销售代表获取详细定制方案。
           </Text>
 
           <View style={styles.tableContainer}>
@@ -32,7 +37,7 @@ const PDFThirdPage: React.FC = () => {
               </View>
             </View>
             <View style={styles.tableBody}>
-              {PRODUCT_DATA.options.map((opt, idx) => (
+              {productData.options.map((opt, idx) => (
                 <View key={idx} style={[styles.tableRow, idx % 2 === 0 ? styles.evenRow : styles.oddRow]}>
                   <View style={[styles.tableCell, styles.categoryCell]}>
                     <Text style={styles.categoryText}>{opt.category}</Text>

@@ -1,9 +1,13 @@
 import React from 'react';
 import { Settings, PlusCircle } from 'lucide-react';
-import { PRODUCT_DATA } from '../constants';
+import { ProductData } from '../types';
 import A4Page from './A4Page';
 
-const ThirdPage: React.FC = () => {
+interface ThirdPageProps {
+  productData: ProductData;
+}
+
+const ThirdPage: React.FC<ThirdPageProps> = ({ productData }) => {
   return (
     <A4Page pageNumber={3}>
       <div className="flex flex-col h-full">
@@ -17,7 +21,7 @@ const ThirdPage: React.FC = () => {
 
         <div className="flex-1">
           <p className="text-slate-600 mb-6 text-sm">
-            根据您的具体业务需求，{PRODUCT_DATA.model} 提供以下模块化升级选项。请联系销售代表获取详细定制方案。
+            根据您的具体业务需求，{productData.model} 提供以下模块化升级选项。请联系销售代表获取详细定制方案。
           </p>
 
           <div className="w-full border border-slate-200 rounded-lg overflow-hidden">
@@ -30,7 +34,7 @@ const ThirdPage: React.FC = () => {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                {PRODUCT_DATA.options.map((opt, idx) => (
+                {productData.options.map((opt, idx) => (
                   <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
                     <td className="p-4 font-semibold text-slate-800 align-top">
                       {opt.category}
