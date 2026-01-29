@@ -1,84 +1,202 @@
 {
-  "model": "DP-9000",
-  "name": "桌面式智能终端",
-  "description": "高性能桌面式智能终端，集成专业显示系统、丰富接口配置和强大的通讯能力，专为各类专业场景设计。",
+  "model": "DP-9000A",
+  "name": "碳纤维三屏防水应急指挥箱",
+  "description": "高性能碳纤维三屏防水应急指挥箱，集成专业显示系统、丰富接口配置和强大的通讯能力，专为各类应急指挥场景设计。",
   "imagePath": "../img/DP-9000A 中性.png",
-  "subtitle": "高性能桌面式显控终端",
+  "subtitle": "碳纤维三屏防水应急指挥箱",
+  "keyFeatures": [
+    {
+      "icon": "Shield",
+      "title": "i7 高性能处理器",
+      "description": "采用Intel Core i7-8700T/6核12线程/2.4GHz处理器，32G内存，1TB NVMe SSD，性能强劲。"
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "title": "三屏显示系统",
+      "description": "3×15.6英寸 FHD (1920×1080)高亮屏，中间屏幕带多点电容触摸屏，亮度500 nits。"
+    },
+    {
+      "icon": "Wifi",
+      "title": "全网络支持",
+      "description": "支持4G全网通路由器，WiFi&蓝牙，3×RJ45 LAN接口，1×RJ45 WAN接口。"
+    },
+    {
+      "icon": "Zap",
+      "title": "专业输入设备",
+      "description": "工业级键盘，多点触控板，三轴摄像头操作摇杆，自定义按键*6 + PTT按键。"
+    }
+  ],
   "specs": [
     {
-      "title": "处理器",
-      "icon": "Cpu",
+      "title": "基本信息",
+      "icon": "Box",
       "items": [
-        {
-          "label": "处理器型号",
-          "value": "Intel Core i5-13400"
-        },
-        {
-          "label": "核心数",
-          "value": "10核 (6P+4E)"
-        },
-        {
-          "label": "主频",
-          "value": "2.5GHz-4.6GHz"
-        }
+        { "label": "型号", "value": "DP-9000A" },
+        { "label": "产品名称", "value": "碳纤维三屏防水应急指挥箱" }
       ]
     },
     {
-      "title": "内存",
-      "icon": "MemoryStick",
+      "title": "处理平台",
+      "icon": "Cpu",
       "items": [
-        {
-          "label": "内存容量",
-          "value": "32GB DDR4"
-        },
-        {
-          "label": "内存插槽",
-          "value": "4个DIMM插槽"
-        },
-        {
-          "label": "最大支持",
-          "value": "128GB"
-        }
+        { "label": "CPU", "value": "Intel Core i7-8700T/6核12线程/2.4GHz" },
+        { "label": "内存", "value": "32G （16GB DDR4 3200MHz ×2）" },
+        { "label": "存储", "value": "1TB NVMe SSD" },
+        { "label": "操作系统", "value": "支持Windows 10 、Windows 11操作系统" }
+      ]
+    },
+    {
+      "title": "屏幕",
+      "icon": "Monitor",
+      "items": [
+        { "label": "屏幕尺寸", "value": "3×15.6英寸 FHD (1920×1080)高亮屏" },
+        { "label": "触摸屏", "value": "中间屏幕带多点电容触摸屏" },
+        { "label": "屏幕亮度", "value": "500 nits" },
+        { "label": "多功能副屏", "value": "串口屏，客户可根据软件需要进行二次开发" },
+        { "label": "显卡", "value": "Intel® UHD Graphics 630 集成显卡" }
+      ]
+    },
+    {
+      "title": "输入设备",
+      "icon": "Keyboard",
+      "items": [
+        { "label": "键盘", "value": "工业级键盘" },
+        { "label": "触控板", "value": "多点触控" },
+        { "label": "三轴摇杆", "value": "三轴摄像头操作摇杆" },
+        { "label": "按键", "value": "自定义按键*6 + PTT按键" }
+      ]
+    },
+    {
+      "title": "I/O接口",
+      "icon": "Cable",
+      "items": [
+        { "label": "USB接口", "value": "4×USB 3.0 Type-A" },
+        { "label": "显示接口", "value": "1×HDMI 输入，1×HDMI 输出（复制左屏，无音频）" },
+        { "label": "音频接口", "value": "1×手咪，1×卡侬接口，2×线性输入" },
+        { "label": "网络接口", "value": "3×RJ45 LAN 10M/100M/1000M 自适应以太网口，1×RJ45 WAN" },
+        { "label": "其他接口", "value": "1×DCIN，1×北斗/GPS接口*1（4芯航插）" }
+      ]
+    },
+    {
+      "title": "音视频",
+      "icon": "Monitor",
+      "items": [
+        { "label": "摄像头", "value": "内置500W像素摄像头" },
+        { "label": "音频输出", "value": "内置2×扬声器" },
+        { "label": "音频输入", "value": "内置1×麦克风" }
+      ]
+    },
+    {
+      "title": "通讯",
+      "icon": "Wifi",
+      "items": [
+        { "label": "有线", "value": "LAN:10/100/1000M" },
+        { "label": "无线", "value": "4G全网通路由器，WiFi&蓝牙" }
+      ]
+    },
+    {
+      "title": "电源",
+      "icon": "Battery",
+      "items": [
+        { "label": "适配器", "value": "230W适配器：AC输入100-240V，DC输出19V（航插）" },
+        { "label": "电池", "value": "锂离子电池，14.8V/16000mAh，典型续航时间3小时" }
+      ]
+    },
+    {
+      "title": "机械规格",
+      "icon": "Box",
+      "items": [
+        { "label": "尺寸", "value": "440×321×152mm (W×D×H)（不含包角）" },
+        { "label": "重量", "value": "12 kg（含电池）" },
+        { "label": "拉杆箱", "value": "ABS防水拉杆箱带轮" }
+      ]
+    },
+    {
+      "title": "环境适应性",
+      "icon": "Shield",
+      "items": [
+        { "label": "工作温度", "value": "0°C ~ +45°C" },
+        { "label": "存储温度", "value": "-20°C ~ +65°C" },
+        { "label": "工作湿度", "value": "5% - 90%，无凝露" },
+        { "label": "存储湿度", "value": "5% - 95%，无凝露" }
       ]
     }
   ],
   "options": [
     {
-      "category": "存储",
-      "option": "标准配置",
-      "spec": "1TB SSD"
+      "category": "系统升级",
+      "option": "第二系统平台",
+      "spec": "至强E-2176M处理器 + 32G内存 + 1T固态硬盘"
     },
     {
-      "category": "存储",
-      "option": "升级配置",
-      "spec": "2TB SSD"
+      "category": "系统升级",
+      "option": "显卡升级",
+      "spec": "独立显卡P1000/4GB显存 半高PCIe显卡"
     },
     {
-      "category": "显示",
-      "option": "单屏配置",
-      "spec": "24英寸FHD显示器"
+      "category": "系统升级",
+      "option": "第二操作系统",
+      "spec": "Ubuntu、CentOS"
     },
     {
-      "category": "显示",
-      "option": "双屏配置",
-      "spec": "双24英寸FHD显示器"
-    }
-  ],
-  "keyFeatures": [
-    {
-      "icon": "Shield",
-      "title": "i5 高性能处理器",
-      "description": "采用i5-13400处理器，32G内存，1TB SSD，性能强劲。"
+      "category": "存储扩展",
+      "option": "SSD扩展",
+      "spec": ""
     },
     {
-      "icon": "MonitorSmartphone",
-      "title": "专业显示系统",
-      "description": "24英寸FHD高亮屏，支持多屏扩展，显示效果出色。"
+      "category": "存储扩展",
+      "option": "内存扩展",
+      "spec": ""
     },
     {
-      "icon": "Wifi",
-      "title": "全网络支持",
-      "description": "支持WiFi 6、蓝牙5.2等多种网络制式，连接稳定。"
+      "category": "显示选项",
+      "option": "高亮显示",
+      "spec": ""
+    },
+    {
+      "category": "显示选项",
+      "option": "触控屏幕",
+      "spec": ""
+    },
+    {
+      "category": "定位功能",
+      "option": "定位模块",
+      "spec": "北斗/GPS高精度定位模块"
+    },
+    {
+      "category": "电池",
+      "option": "备用电池",
+      "spec": "DP-9000A备用电池"
+    },
+    {
+      "category": "网络",
+      "option": "移动网络",
+      "spec": "5G公网，支持无线AP"
+    },
+    {
+      "category": "定制服务",
+      "option": "开机LOGO定制",
+      "spec": "支持格式：BMP/PNG，分辨率：1920×1080"
+    },
+    {
+      "category": "定制服务",
+      "option": "机身LOGO定制",
+      "spec": "丝印/金属标贴，尺寸：30×10mm（标准）"
+    },
+    {
+      "category": "定制服务",
+      "option": "产品铭牌定制",
+      "spec": "材质：金属/PVC/亚克力，尺寸：50×30mm"
+    },
+    {
+      "category": "定制服务",
+      "option": "包装定制",
+      "spec": "定制说明书，MOQ：10pcs，定制附件包"
+    },
+    {
+      "category": "定制服务",
+      "option": "颜色定制",
+      "spec": "黑色/银色"
     }
   ]
 }
